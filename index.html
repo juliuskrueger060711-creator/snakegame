@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <div class="panel-top">
+        <div>
+          <p class="eyebrow">Browser Game</p>
+          <h1>Snake</h1>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+          Darkmode
+        </button>
+      </div>
+
+      <p class="intro">
+        Sammle so viele Pixel-Fruechte wie moeglich, ohne gegen dich selbst oder den Rand zu krachen.
+      </p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Punkte</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Bestwert</span>
+          <strong id="highscore">0</strong>
+        </div>
+      </div>
+
+      <div class="difficulty">
+        <p class="difficulty-label">Schwierigkeit</p>
+        <div class="difficulty-options" id="difficultyOptions">
+          <button type="button" class="difficulty-button active" data-difficulty="easy">Leicht</button>
+          <button type="button" class="difficulty-button" data-difficulty="medium">Mittel</button>
+          <button type="button" class="difficulty-button" data-difficulty="hard">Schwer</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startButton" type="button">Neu starten</button>
+        <p>Pfeiltasten oder WASD zum Steuern. Mit mehr Punkten erscheinen Felsen als neue Hindernisse.</p>
+      </div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="game" width="420" height="420" aria-label="Snake Spielfeld"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">Bereit?</h2>
+        <p id="overlayText">Druecke eine Richtungstaste oder starte per Button.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
